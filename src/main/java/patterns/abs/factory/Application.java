@@ -4,7 +4,7 @@ import patterns.abs.factory.entityFactory.NpcFactory;
 
 public class Application {
 
-    private NpcFactory npcFactory;
+    private final NpcFactory npcFactory;
 
     public Application (NpcFactory factory) {
         this.npcFactory = factory;
