@@ -1,8 +1,6 @@
-package patterns.structural.entity;
+package patterns.structural.bridge.npc;
 
 public interface NPC {
-
-    int distanceFromPlayer();
     boolean wasHitInLastTenSeconds();
     boolean isThePlayerDead();
     boolean isAggressive();
@@ -11,5 +9,5 @@ public interface NPC {
     void stopAttacking();
     void getAggressive();
     void getCalm();
-
+    void loseHp(int damage);
 }

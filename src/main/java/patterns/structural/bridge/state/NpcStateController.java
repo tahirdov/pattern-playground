@@ -1,6 +1,9 @@
-package patterns.structural.entity;
+package patterns.structural.bridge.state;
 
-public abstract class NpcStateController {
+import patterns.structural.bridge.npc.NPC;
+import utils.Console;
+
+public class NpcStateController {
 
     protected NPC npc;
 
@@ -11,11 +14,13 @@ public abstract class NpcStateController {
     public void changeAttackState(){
         if (npc.isAttacking()) npc.stopAttacking();
         else npc.startAttacking();
+        Console.print("Starting attacking players");
     }
 
     public void changeAggressiveness() {
         if (npc.isAggressive()) npc.getCalm();
         else npc.getAggressive();
+        Console.print("Got aggressive");
     }
 
 
